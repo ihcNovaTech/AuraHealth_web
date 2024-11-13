@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordatorios</title>
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <!--Diseño del menú-->
+    <header>
+        <nav class="navbar"> <img src="img/logo2.png" alt="">
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="PagInicio.html">Inicio</a></li>
+                    <li><a href="Recordatorios.html">Recordatorios</a></li>
+                    <li><a href="Recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="perfil.html">Mi Perfil</a></li>
+                    <li><a href="Nosotros.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>  
+
+    <div class="reminder-section">
+      <!-- Lista de Recordatorios -->
+      <div class="reminder-list">
+          <h2>Lista de Recordatorios</h2>
+          <ul id="reminderItems">
+              <!-- Los recordatorios se cargarán aquí -->
+          </ul>
+          <button onclick="openModal()">Añadir Recordatorio</button>
+      </div>
+
+      <!-- Sección de Calendario -->
+      <div class="calendar">
+          <h2>Calendario</h2>
+          <div id="calendarContainer">
+              <div id="calendarHeader">
+                  <button onclick="prevMonth()">&#10094;</button>
+                  <span id="monthYear"></span>
+                  <button onclick="nextMonth()">&#10095;</button>
+              </div>
+              <div id="calendarDays"></div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Modal para agregar recordatorio -->
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Agregar Recordatorio</h2>
+            <div class="modal-body">
+                <!-- Formulario de recordatorio -->
+                <form id="reminderForm">
+                    <label for="reminderDate">Fecha:</label>
+                    <input type="date" id="reminderDate" required>
+                    
+                    <label for="reminderTime">Hora:</label>
+                    <input type="time" id="reminderTime" required>
+                    
+                    <label for="reminderTitle">Título:</label>
+                    <input type="text" id="reminderTitle" required placeholder="Ingresa el título">
+                    
+                    <button type="button" onclick="saveReminder()">Guardar Recordatorio</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/index.js"></script>
+</body>
+</html>

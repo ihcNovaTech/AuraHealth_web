@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/perfil.css">
+
+    <title>AuraHealth</title>
+
+</head>
+<body>
+    <!--Menú de Navegación-->
+    <header>
+        <div class="logo">
+            <img src="img/LOGO1.png" alt="">
+            <h1 class="nombre-de-empresa">AuraHealth</h1>
+        </div>
+        <input type="checkbox" id="check" class="menu-toggle">
+        <label for="check" class="checkbtn">☰</label> 
+        <nav>
+            <ul>
+                <li><a href="PagInicio.html">Inicio</a></li>
+                <li><a href="Recordatorios.html">Recordatorios</a></li>
+                <li><a href="Recomendaciones.html">Recomendaciones</a></li>
+                <li><a href="perfil.html"class="active">Mi perfil</a></li>
+                <li><a href="Nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contendores">
+            <!-- Primera sección -->
+            <section class="personal">
+                <div class="imagen">
+                    <img src="img/FP.png" alt="">
+                </div>
+                <div></div>
+                <form>
+                    <h2 class="T1"> Información Personal</h2>
+                    <div class="input-container">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="input-container">
+                        <label for="age">Edad:</label>
+                        <input type="text" id="age" name="age" required placeholder="Escribe tu edad">
+                    </div>
+                    <div class="input-container">
+                        <label for="gender">Género:</label>
+                        <input type="text" id="gender" name="gender" required placeholder="Escribe tu género">
+                    </div>
+                </form>
+            </section>
+    
+            <!-- Segunda sección -->
+            <section class="historial">
+                <form>
+                    <h2 class="T2"> Antecendentes Médicos</h2>
+                    <div class="input-container">
+                        <label for="blood-group">Grupo Sanguíneo:</label>
+                        <input type="text" id="blood-group" name="blood-group" required placeholder="Escribe tu grupo Sanguíneo">
+                    </div>
+                    <div class="input-container">
+                        <label for="family-history">Historial Familiar:</label>
+                        <div class="additional-history">
+                            <input type="text" placeholder="Escribe un antecedente familiar">
+                            <input type="text" placeholder="Escribe un antecedente familiar">
+                            <input type="text" placeholder="Escribe un antecedente familiar">
+                            <input type="text" placeholder="Escribe un antecedente familiar">
+                        </div>
+                    </div>
+                    <div class="button-container"><button type="button" class="add-more">+</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
