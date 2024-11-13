@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: hsla(166.5, 36%, 56%, 1);
+    background-image: radial-gradient(circle at 0% 50%, hsla(212.4, 40%, 42%, 1) 0%, transparent 50%), 
+                      radial-gradient(circle at 80% 50%, hsla(212.4, 0%, 60%, 1) 0%, transparent 50%), 
+                      radial-gradient(circle at 80% 0%, hsla(212.4, 72%, 58%, 1) 0%, transparent 50%), 
+                      radial-gradient(circle at 0% 100%, hsla(0, 0%, 60%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 100%, hsla(212.4, 72%, 58%, 1) 0%, transparent 50%), 
+                      radial-gradient(circle at 0% 0%, hsla(166.3, 0%, 100%, 1) 0%, transparent 50%);
+    background-blend-mode: normal;
+    color: #1f1f1f;
+}
+
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 120px;
+    margin-top: 0px;
+
+ 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 80px;
+    margin-right: 20px;
+}
+
+nav ul li {
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    border: 6px solid #213D6C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+.active{
+    color:white;
+    background-color: #213D6C;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #553d;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1480px) {
+    .checkbtn {
+        display: block; 
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        top: 0;
+        left: -100%; 
+        text-align: center;
+        flex-direction: column;
+        transition: all 0.5s ease;
+        gap: 20px;
+        padding-top: 50px; 
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #1f1f1f;
+    }
+
+    #check:checked ~ nav ul {
+        left: 0; 
+    }
+}
+.imagen {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+
+.imagen img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid #213D6C;
+}
+
+.contendores {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 150px; 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+.T1{
+    color: black;
+    font-size: 20px;
+    margin: 15px  ;
+    text-align: center;
+    padding: 10px;
+}
+
+.personal, .historial {
+    background-color: white; 
+    margin-top: 105px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    width: 100%; 
+    max-width: 500px; 
+}
+
+@media (min-width: 768px) {
+    .personal, .historial {
+        width: 45%; 
+    }
+}
+@media (min-width: 1024px) {
+    .contendores {
+        gap: 150px; 
+    }
+}
+.input-container {
+    color: white;
+    border: 2px solid #213D6C; 
+    padding: 10px;         
+    margin-bottom: 15px;  
+    border-radius: 4px;    
+    background-color: #213D6C;
+}
+.T2{
+    color: black;
+    font-size: 20px;
+    margin: 15px  ;
+    text-align: center;
+    padding: 20px;
+}
+label {
+    display: block;        
+    margin-bottom: 15px;   
+}
+
+input[type="text"], input[type="number"] {
+    border: 1px solid #ffffff;
+    padding: 10px;           
+    width: 100%;            
+    border-radius: 4px;     
+    outline: none;          
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #213D6C;     
+}
+
+
+input, select, textarea {
+    width: 100%; 
+    margin-bottom: 10px; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+}
+
+button {
+    background-color: #213D6C; 
+    color: white; 
+    padding: 25px 35px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    
+}
+
+.additional-history {
+    margin-top: 25px; 
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 35px; 
+}
+.add-more {
+    background-color: #213D6C; 
+    border: 5px  #213D6C; 
+    color: #ffffff; 
+    border-radius: 50%;
+    font-size: 40px; 
+    cursor: pointer;  
+    margin: 10px 0; 
+    padding: 10px; 
+
+}

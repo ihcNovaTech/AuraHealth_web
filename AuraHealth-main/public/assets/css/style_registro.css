@@ -1,0 +1,145 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsla(166.5043446300349, 36%, 56%, 1);
+    background-image: radial-gradient(circle at 0% 50%, hsla(212.36842105263182, 40%, 42%, 1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, hsla(212.3684210526316, 0%, 60%, 1) 0%, transparent 50%), radial-gradient(circle at 80% 0%, hsla(212.3684210526316, 72%, 58%, 1) 0%, transparent 50%), radial-gradient(circle at 0% 100%, hsla(0, 0%, 60%, 1) 0%, transparent 50%), radial-gradient(circle at 80% 100%, hsla(212.3684210526316, 72%, 58%, 1) 0%, transparent 50%), radial-gradient(circle at 0% 0%, hsla(166.32670977938906, 0%, 100%, 1) 0%, transparent 50%);
+}
+
+/*Parte logo y cuentas*/
+header {
+    background-color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegación */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav .logo img {
+    width: 150px;
+}
+
+.redes-superiores {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.redes-superiores li {
+    display: inline;
+}
+
+.redes-superiores li a img {
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+.redes-superiores li a img:hover {
+    transform: scale(1.1);
+}
+
+/*box de crear cuenta*/
+.container {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;    /* Centrado vertical */
+    height: 120vh;          /* Altura completa de la ventana */
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+button {
+    width: 50%;
+    padding: 5px;
+    background-color: #0a2876;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #092063;
+}
+
+/* Botones de login social */
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.google-btn, .facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0a2876;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 48%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+    background-color: #092063;
+}
+
+.facebook-btn:hover {
+    background-color: #092063;
+}
+
+.google-btn img, .facebook-btn img {
+    width: 20px;
+}
+
+.login-link {
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    text-decoration: underline;
+}
