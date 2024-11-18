@@ -22,8 +22,7 @@ ofrezca contenido educativo personalizado y recordatorios preventivos, ayudando
 a las personas de todas las edades a mejorar y mantener su salud mediante la 
 prevención de enfermedades. 
 ## Autores
-Bellido Salas, Raúl                                                    
-
+Bellido Salas, Raúl                                                   
 Callañaupa Aguilar, Masiel Alejandra                            
 Gutiérrez Condo, Maylhy Olinda                  
 Jimenez Pinto, Lucia Belén                     
