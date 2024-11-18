@@ -1,129 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    background-color: hsla(166.5, 36%, 56%, 1);
-    background-image: radial-gradient(circle at 0% 50%, hsla(212.4, 40%, 42%, 1) 0%, transparent 50%), 
-                      radial-gradient(circle at 80% 50%, hsla(212.4, 0%, 60%, 1) 0%, transparent 50%), 
-                      radial-gradient(circle at 80% 0%, hsla(212.4, 72%, 58%, 1) 0%, transparent 50%), 
+    background-color: hsla(166, 36%, 56%, 1);
+    background-image: radial-gradient(circle at 0% 50%, hsla(212, 40%, 42%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 50%, hsla(212, 0%, 60%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 0%, hsla(212, 72%, 58%, 1) 0%, transparent 50%),
                       radial-gradient(circle at 0% 100%, hsla(0, 0%, 60%, 1) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 100%, hsla(212.4, 72%, 58%, 1) 0%, transparent 50%), 
-                      radial-gradient(circle at 0% 0%, hsla(166.3, 0%, 100%, 1) 0%, transparent 50%);
-    background-blend-mode: normal;
+                      radial-gradient(circle at 80% 100%, hsla(212, 72%, 58%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 0% 0%, hsla(166, 0%, 100%, 1) 0%, transparent 50%);
+    background-blend-mode: normal, normal, normal, normal, normal, normal;
     color: #1f1f1f;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-header {
+/* Estilos del menú */
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+.navbar{
+    background: white;
     display: flex;
-    position: relative;
-    width: 100%;
-    background-color: #ffffff;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px 10px 120px;
-    margin-top: 0px;
-
- 
+    padding: 15px;
 }
 
-.logo {
+/* Contenedor del logo y texto */
+.navbar img{
+    width: 11rem;
+}
+
+.logo-text {
+    height: 30px; /* Asegura que el texto esté del mismo tamaño */
+    margin-left: -5px; /* Opcional: ajusta el espacio si se ve mejor sin separación */
+}
+.menu {
     display: flex;
-    align-items: center;
+    gap: 25px;
 }
 
-.logo img {
-    height: 100px;
-    margin-right: 10px;
-}
-
-nav {
-    float: right;
-}
-
-nav ul {
+.list{
+    list-style: none;
     display: flex;
-    list-style-type: none;
-    gap: 80px;
-    margin-right: 20px;
+    gap: 25px;
+    background: white;
 }
 
-nav ul li {
-    line-height: 80px;
+.navbar label{
+    display:none
 }
 
-nav ul li a {
-    color: black;
+.list li a {
     text-decoration: none;
+    color: #0a2e5c;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
     text-transform: capitalize;
-    font-size: 15px;
-    border: 6px solid #213D6C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    padding: 5px 20px;
-}
-.active{
-    color:white;
-    background-color: #213D6C;
+    transition: background 0.3s;
 }
 
-.checkbtn {
-    font-size: 30px;
-    color: #553d;
-    cursor: pointer;
-    display: none;
+.list li a:hover {
+    background: #0a2e5c;
+    color: white;
 }
 
-#check {
-    display: none;
-}
-
-@media (max-width: 1480px) {
-    .checkbtn {
-        display: block; 
-    }
-
-    nav ul {
-        position: fixed;
+@media screen and (max-width: 600px) {
+    .menu {
         width: 100%;
-        height: 100vh;
-        background: #ffffff;
-        top: 0;
-        left: -100%; 
-        text-align: center;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .list {
         flex-direction: column;
-        transition: all 0.5s ease;
-        gap: 20px;
-        padding-top: 50px; 
+        align-items: center;
+        padding: 20px;
     }
-
-    nav ul li a {
-        font-size: 20px;
-        color: #1f1f1f;
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
     }
-
-    #check:checked ~ nav ul {
-        left: 0; 
-    }
-}
-.imagen {
-    display: flex;
-    justify-content: center; 
-    margin-bottom: 15px; 
-}
-
-.imagen img{
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 10px solid #213D6C;
 }
 
 .contendores {
