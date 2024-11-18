@@ -4,7 +4,12 @@ body {
     margin: 0;
     padding: 0; 
     background-color: hsla(166.5043446300349, 36%, 56%, 1);
-    background-image: radial-gradient(circle at 0% 50%, hsla(212.36842105263182, 40%, 42%, 1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, hsla(212.3684210526316, 0%, 60%, 1) 0%, transparent 50%), radial-gradient(circle at 80% 0%, hsla(212.3684210526316, 72%, 58%, 1) 0%, transparent 50%), radial-gradient(circle at 0% 100%, hsla(0, 0%, 60%, 1) 0%, transparent 50%), radial-gradient(circle at 80% 100%, hsla(212.3684210526316, 72%, 58%, 1) 0%, transparent 50%), radial-gradient(circle at 0% 0%, hsla(166.32670977938906, 0%, 100%, 1) 0%, transparent 50%);
+    background-image: radial-gradient(circle at 0% 50%, hsla(212.36842105263182, 40%, 42%, 1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, hsla(212.3684210526316, 0%, 60%, 1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 0%, hsla(212.3684210526316, 72%, 58%, 1) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, hsla(0, 0%, 60%, 1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 100%, hsla(212.3684210526316, 72%, 58%, 1) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, hsla(166.32670977938906, 0%, 100%, 1) 0%, transparent 50%);
 }
 
 header {
@@ -82,31 +87,23 @@ header {
     font-size: 14px;
 }
 
-.login-form button {
+/* Botón principal de inicio de sesión */
+.btn-login-primary {
+    display: inline-block;
     background-color: #1A2B4E;
     color: white;
-    padding: 10px;
-    width: 45%;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
+    width: 200px;
+    margin: 10px auto;
 }
 
-.login-form button:hover {
+.btn-login-primary:hover {
     background-color: #16233e;
-}
-
-.login-form p {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.login-form p a{
-    margin-top: 20px;
-    font-size: 14px;
-    color: #077bff;
-    text-decoration: underline
 }
 
 /* Botones de login social */
@@ -116,12 +113,14 @@ header {
     margin-top: 10px;
 }
 
-.google-btn, .facebook-btn {
+.google-btn,
+.facebook-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: white;
+    background-color: #1A2B4E;
+    color: white;  /* Añade esta línea */
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 8px;
@@ -130,23 +129,34 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.google-btn:hover {
-    background-color: #f5f5f5;
-}
-
+.google-btn:hover,
 .facebook-btn:hover {
-    background-color: #f5f5f5;
+    background-color: #2a4270;
 }
 
-.google-btn img, .facebook-btn img {
+.google-btn img,
+.facebook-btn img {
     width: 20px;
 }
 
-.login-form a {
-    color: #1A2B4E;
-    text-decoration: none;
+/* Enlace de registro */
+.register-link {
+    color: #077bff;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-.login-form a:hover {
-    text-decoration: underline;
+.register-link:hover {
+    color: #0056b3;
+}
+
+/* Texto normal */
+.login-form p {
+    margin: 20px 0;
+    font-size: 14px;
+    color: black;
 }
