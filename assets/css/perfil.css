@@ -96,6 +96,19 @@ header{
     }
 }
 
+.imagen {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+.imagen img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid #213D6C;
+}
+
 .contendores {
     display: flex;
     flex-wrap: wrap; 
